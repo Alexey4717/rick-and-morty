@@ -8,6 +8,7 @@
 
 <script>
 export default {
-  name: 'LogoIcon'
+  name: 'LogoIcon',
+  template: '<div></div>'
 }
 </script>

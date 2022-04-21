@@ -1,23 +1,20 @@
 <template>
-  <div class="header">
-    <logo/>
-    <navbar/>
+  <Header />
+  <div class="container">
+    <slot />
   </div>
-    <slot/>
-  <div class="footer">
-    footer
-  </div>
+  <Footer/>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar"
-import Logo from "@/assets/icons/Logo"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 
 export default {
   name: "HomeComponent",
   components: {
-    Navbar,
-    Logo
-  }
+    Header,
+    Footer
+  },
 };
 </script>
