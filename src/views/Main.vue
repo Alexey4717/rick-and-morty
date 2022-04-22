@@ -1,11 +1,16 @@
 <template>
-  <div>
+  <View>
     Main
-  </div>
+  </View>
 </template>
 
 <script>
+import View from '@/components/View'
+
 export default {
-  name: 'MainComponent'
+  name: 'MainComponent',
+  components: {
+    View
+  }
 }
 </script>

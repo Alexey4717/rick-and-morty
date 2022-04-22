@@ -1,11 +1,16 @@
 <template>
-  <div>
+  <View withPagination>
     Episodes
-  </div>
+  </View>
 </template>
 
 <script>
+import View from '@/components/View'
+
 export default {
-  name: 'EpisodesComponent'
+  name: 'EpisodesComponent',
+  components: {
+    View
+  }
 }
 </script>

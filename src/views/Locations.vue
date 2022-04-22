@@ -1,11 +1,16 @@
 <template>
-  <div>
+  <View withPagination>
     Locations
-  </div>
+  </View>
 </template>
 
 <script>
+import View from '@/components/View'
+
 export default {
-  name: 'LocationsComponent'
+  name: 'LocationsComponent',
+  components: {
+    View
+  }
 }
 </script>

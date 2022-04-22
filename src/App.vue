@@ -24,4 +24,9 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
+a {
+  color: none;
+  text-decoration: none;
+}
 </style>

@@ -1,0 +1,45 @@
+<template>
+  <nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item disabled">
+        <a class="page-link">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</template>
+
+<script>
+export default {
+  name: "PaginationComponent",
+  props: {
+    totalCount: {
+      type: Number,
+      required: false
+    },
+    lastPage: {
+      type: Number,
+      required: false
+    },
+    currentPage: {
+      type: Number,
+      required: false
+    },
+    prevLink: {
+      type: String,
+      required: false
+    },
+    nextLink: {
+      type: String,
+      required: false
+    },
+  }
+};
+</script>

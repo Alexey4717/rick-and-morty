@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex container py-4">
+  <div class="d-flex align-items-center container p-4 mt-2 mb-4 bg-dark bg-gradient rounded-pill">
     <logo/>
     <navbar />
   </div>

@@ -1,6 +1,8 @@
 # rick-and-morty library
 
-# author Alex Mois
+# frontend-developer Alex Mois
+
+# api-backend from 'https://rickandmortyapi.com/'
 
 # vue_app
 
