@@ -20,7 +20,7 @@
           style="height: 100%"
         >
           <h5 class="card-title my-0">
-            <a :src="url">
+            <a src="#">
               {{ name }}
             </a>
           </h5>
@@ -36,11 +36,11 @@
           <div class="d-flex justify-content-between my-0 w-100">
             <div class="card-text mb-0">
               <p class="d-block my-0">origin:</p>
-              <a :src="originUrl">{{ origin }}</a>
+              <p>{{ origin }}</p>
             </div>
             <div class="card-text mb-0">
               <p class="d-block my-0">Last known location:</p>
-              <a :src="locationUrl">{{ location }}</a>
+              <p>{{ location }}</p>
             </div>
           </div>
         </div>
@@ -78,23 +78,11 @@ export default {
       type: String,
       required: false,
     },
-    originUrl: {
-      type: String,
-      required: false,
-    },
     location: {
       type: String,
       required: false,
     },
-    locationUrl: {
-      type: String,
-      required: false,
-    },
     image: {
-      type: String,
-      required: false,
-    },
-    url: {
       type: String,
       required: false,
     },
