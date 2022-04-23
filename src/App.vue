@@ -29,4 +29,10 @@ a {
   color: none;
   text-decoration: none;
 }
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
 </style>

@@ -1,9 +1,6 @@
 <template>
   <div class="nav nav-pills ms-auto" id="nav">
-    <NavLink link="Main" />
-    <NavLink link="Characters" />
-    <NavLink link="Locations" />
-    <NavLink link="Episodes" />
+    <NavLink v-for="navlink in navlinks" :link="navlink" :key="navlink" />
   </div>
 </template>
 
@@ -12,6 +9,16 @@ import NavLink from "./NavLink";
 
 export default {
   name: "NavbarComponent",
+  data() {
+    return {
+      navlinks: [
+        "Main",
+        "Characters",
+        "Locations",
+        "Episodes"
+      ]
+    }
+  },
   components: {
     NavLink,
   },

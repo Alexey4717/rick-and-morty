@@ -1,9 +1,12 @@
 <template>
-  <View withPagination>
-    <p>Всего страниц: {{ characters?.info?.pages }}</p>
-    <p>Всего персонажей: {{ characters?.info?.count }}</p>
-    <p>Предыдущая ссылка: {{ characters?.info?.prev }}</p>
-    <p>Следующая ссылка: {{ characters?.info?.next }}</p>
+  <View
+    :pagination="{
+      lastPage: characters?.info?.pages,
+      currentPage: page,
+      handlePage
+    }"
+    :totalCount="characters?.info?.count"
+  >
     <div
       class="d-flex flex-wrap justify-content-between"
       v-if="characters?.results?.length"
@@ -21,11 +24,7 @@
     </div>
     <span v-if="loading">...loading...</span>
   </View>
-  <Alert
-    v-if="error"
-    message="Fetching characters is failed"
-    status="danger"
-  />
+  <Alert v-if="error" message="Fetching characters is failed" status="danger" />
 </template>
 
 <script>
@@ -47,20 +46,25 @@ export default {
       page: 1,
       characters: null,
       loading: 0,
-      error: null
+      error: null,
     };
   },
   apollo: {
     characters: {
       query: GET_ALL_CHARACTERS,
-      loadingKey: 'loading',
+      loadingKey: "loading",
       variables() {
-        return { page: this.page }
+        return { page: this.page };
       },
       error(error) {
-        this.error = error 
-      }
+        this.error = error;
+      },
     },
   },
+  methods: {
+    handlePage(pageNumber) {
+      this.page = pageNumber
+    }
+  }
 };
 </script>

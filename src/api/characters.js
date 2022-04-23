@@ -6,8 +6,6 @@ const GET_ALL_CHARACTERS = gql`
       info {
     	  count
     	  pages
-    	  next
-    	  prev
   	  }
   	  results {
         id
