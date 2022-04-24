@@ -10,6 +10,11 @@ const cache = new InMemoryCache()
 const apolloClient = new ApolloClient({
   link: httpLink,
   cache,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'network-only',
+    }
+  }
 })
 
 export default apolloClient
